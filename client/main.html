@@ -1,0 +1,22 @@
+<body>
+  body: {{stringType}}<br>
+
+  {{#each strings}}
+    each: {{thisType}}<br>
+  {{/each}}
+
+  {{#with string}}
+    with: {{thisType}}<br>
+  {{/with}}
+
+  {{> stringData string}}
+  {{> objectData string=string}}
+</body>
+
+<template name="stringData">
+  String Data: {{thisType}}<br>
+</template>
+
+<template name="objectData">
+  Object Data: {{stringType}}<br>
+</template>
